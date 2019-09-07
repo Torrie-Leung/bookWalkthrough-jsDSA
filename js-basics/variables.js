@@ -5,4 +5,4 @@ var price = 1.5//declare a decimal floating point
 var myName = 'Chimp';// declare a string
 var trueV = true;// declare a boolean
 var nullV = null;// declare a null-no value
-var und;// undefined means a variable that has been declared but not yet assigned a value
+var und;// undefined means a variable that has been declared but not yet assigned a values
