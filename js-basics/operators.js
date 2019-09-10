@@ -34,3 +34,10 @@ console.log('~5 : ',(~5))
 console.log('5^1 : ',(5^1))
 console.log('5<<1 : ',(5<<1))
 console.log('5>>1 : ',(5>>1))
+
+//typeof operator
+console.log('typeof num: ', typeof num);
+console.log('typeof Bender: ', typeof 'Bender');
+console.log('typeof true: ', typeof true);
+console.log('typeof [1,2,3]: ', typeof [1,2,3]);
+console.log('typeof {name: Bender}: ', typeof {name:'Bender'});
