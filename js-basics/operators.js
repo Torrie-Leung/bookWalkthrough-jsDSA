@@ -25,3 +25,12 @@ console.log('num <1: '+(num < 1))
 console.log('true && false: '+(true && false));
 console.log('true || false: '+(true || false));
 console.log('!true: '+(!true));
+
+//bitwise operator
+//Bitwise operators treat their operands as a sequence of 32 bits (zeroes and ones), rather than as decimal, hexadecimal, or octal numbers.
+console.log('5 & 1: ',(5 & 1))
+console.log('5 | 1: ',(5 | 1))
+console.log('~5 : ',(~5))
+console.log('5^1 : ',(5^1))
+console.log('5<<1 : ',(5<<1))
+console.log('5>>1 : ',(5>>1))
