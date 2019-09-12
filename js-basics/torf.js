@@ -1,3 +1,7 @@
+console.log('Bender' == true);//it converts the boolean value using toNumber so we hav Bender == 1
+console.log('Bender' == false);//it converts the boolean value using toNumber so we hav Bender == 0
+
+
 function testTruthy(val){
   return val ? console.log(`${val} is`,'truthy'):console.log(`${val} is`,'falsy')
 }
