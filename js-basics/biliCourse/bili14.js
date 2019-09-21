@@ -35,3 +35,29 @@ function Queue() {
 
 //使用队列
 const q = new Queue()
+
+//题目：击鼓传花改造版
+function passFlower(nameList,num){
+  //1.创建1个队列结构
+  let queue = new Queue()
+  //2.将所有人依次加入到队列中
+  for(let i = 0; i< nameList.length; i++){
+    queue.enqueue(nameList[i])
+  }
+  console.log(queue.toStrin())
+  //3.开始数数字 
+  while(queue.size() > 1){
+    //非num时重新加入队列掉末尾,是则删除
+    for(let i = 0; i<num - 1; i++){
+      queue.enqueue(queue.dequeue())
+      console.log(queue.toStrin())
+    }
+    queue.dequeue()
+  }
+  let winner =queue.front()
+  
+  let winner_index = nameList.indexOf(winner)
+  console.log('winner is: ', winner,winner_index)
+}
+
+passFlower(['yoshi','mario','toad'],3);
