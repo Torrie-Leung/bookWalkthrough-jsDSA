@@ -47,15 +47,17 @@ function passFlower(nameList,num){
   console.log(queue.toStrin())
   //3.开始数数字 
   while(queue.size() > 1){
-    //非num时重新加入队列掉末尾,是则删除
+    //非num时重新加入队列掉末尾
     for(let i = 0; i<num - 1; i++){
       queue.enqueue(queue.dequeue())
-      console.log(queue.toStrin())
+      //console.log(queue.toStrin())
     }
+    //是num则删除
     queue.dequeue()
   }
+  //获取剩下那条友
   let winner =queue.front()
-  
+  //查看这条友的index
   let winner_index = nameList.indexOf(winner)
   console.log('winner is: ', winner,winner_index)
 }
