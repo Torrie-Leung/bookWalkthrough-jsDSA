@@ -13,6 +13,7 @@ function LinkedList() {
   LinkedList.prototype.append = function(data){
     //创建新节点
     let newNode = new Node(data)
+    let current
     //判断是否添加的是第一个节点
     if(this.length == 0){
       //是第一个节点
@@ -20,8 +21,9 @@ function LinkedList() {
     }else{
       //不是第一个节点
       //找到最后一个节点
-      let current = this.head
-      while(current){
+      current = this.head
+      
+      while(current.next != null){
         current = current.next
       }
       //最后一个节点指向next
@@ -30,4 +32,23 @@ function LinkedList() {
     //length +1
     this.length += 1
   }
+
+  LinkedList.prototype.toString = function () {
+    //1.定义变量
+    let current = this.head
+    let listString = ""
+    //2.循环获取各个节点
+    while(current){
+      listString += current.data + ' '
+      current = current.next
+    }
+    return listString
+  }
 }
+
+let testList = new LinkedList()
+
+testList.append('abc')
+testList.append('ccc')
+console.log(testList.toString())
+
