@@ -1,3 +1,4 @@
+//sort an array with any type of object in it
 const friends = [
   { name: 'Callum', age: 30 },
   { name: 'Eddie', age: 38 },
@@ -12,4 +13,14 @@ function comparePerson(a,b){
   }
   return 0;
 }
+function sortNameAlphabet(a,b){
+  if(a.name < b.name){
+    return -1;
+  }
+  if(a.name > b.name){
+    return 1;
+  }
+  return 0;
+}
 console.log(friends.sort(comparePerson));
+console.log(friends.sort(sortNameAlphabet));
