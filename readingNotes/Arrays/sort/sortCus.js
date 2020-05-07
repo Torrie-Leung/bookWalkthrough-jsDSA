@@ -2,6 +2,7 @@
 const friends = [
   { name: 'Callum', age: 30 },
   { name: 'Eddie', age: 38 },
+  { name: 'ellen', age: 38 },
   { name: 'Wendy', age: 26 }, 
 ];
 function comparePerson(a,b){
@@ -14,10 +15,10 @@ function comparePerson(a,b){
   return 0;
 }
 function sortNameAlphabet(a,b){
-  if(a.name < b.name){
+  if(a.name.toLowerCase() < b.name.toLowerCase()){
     return -1;
   }
-  if(a.name > b.name){
+  if(a.name.toLowerCase() > b.name.toLowerCase()){
     return 1;
   }
   return 0;
